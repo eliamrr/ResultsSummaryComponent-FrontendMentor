@@ -1,0 +1,102 @@
+*{
+    /* Primarios */
+    --Rojo_claro: hsl(0, 100%, 67%);
+    --Amarillo_anaranjado: hsl(39, 100%, 56%);
+    --Verde_azulado: hsl(166, 100%, 37%);
+    --Azul_cobalto: hsl(234, 85%, 45%);
+
+    /* Degradados (Gradients) */
+    --Azul_pizarra_claro_fondo: hsl(252, 100%, 67%);
+    --Azul_real_claro_fondo: hsl(241, 81%, 54%);
+    --Azul_violeta_círculo: hsla(256, 72%, 46%, 1);
+    --Azul_persa_círculo: hsla(241, 72%, 46%, 0);
+
+    /* Neutros */
+    --Blanco: hsl(0, 0%, 100%);
+    --Azul_pálido: hsl(221, 100%, 96%);
+    --Lavanda_claro: hsl(241, 100%, 89%);
+    --Azul_grisáceo_oscuro: hsl(224, 30%, 27%);
+
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: flex-start;
+
+    /* Eliminar */
+    background-image: url(./design/desktop-design.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    .card-principal{
+        width: 36.7em;
+        height: 25.6em;
+        border-radius: 1.5em;
+        display: flex;
+        
+        /* Eliminar */
+        background-color: rgba(255, 0, 217, 0.468);
+        .mitad{
+            padding: 2em;
+            width: 50%;
+            height: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+
+            
+        }
+        .one{
+            color: white;
+            text-align: center;
+            
+            background-color:var(--Azul_real_claro_fondo);
+            /* background-color:var(--Azul_pizarra_claro_fondo); */
+            .p1{
+                font-size: 1.2em;
+                font-weight: 700;
+            }
+            .p2-p3{
+                margin: auto;
+                width: 10em;
+                height: 10em;
+                border-radius: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                /* Colores */
+                background-color:var(--Azul_violeta_círculo);
+                /* background-color:var(--Azul_persa_círculo); */
+
+                .p2{
+                    font-size: 4em;
+                    font-weight: 700;
+                }
+            }
+            .texto-final{
+                .h3-1{
+                    font-size: 1.5em;
+                }
+                .p4{
+                    text-align: center;
+                    font-size: 1em;
+                }
+
+            }
+        }
+        .two{
+            background-color:var(--Blanco);
+        }
+    }
+}
