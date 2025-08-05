@@ -8,7 +8,7 @@
     /* Degradados (Gradients) */
     --Azul_pizarra_claro_fondo: hsl(252, 100%, 67%);
     --Azul_real_claro_fondo: hsl(241, 81%, 54%);
-    --Azul_violeta_círculo: hsla(256, 72%, 46%, 1);
+    --Azul_violeta_círculo: rgba(78, 33, 202, 0.553);
     --Azul_persa_círculo: hsla(241, 72%, 46%, 0);
 
     /* Neutros */
@@ -57,12 +57,11 @@ body{
             
         }
         .one{
-            color: white;
             text-align: center;
-            
             background-color:var(--Azul_real_claro_fondo);
-            /* background-color:var(--Azul_pizarra_claro_fondo); */
+            color:var(--Azul_pálido);
             .p1{
+                color: var(--Lavanda_claro);
                 font-size: 1.2em;
                 font-weight: 700;
             }
@@ -74,14 +73,19 @@ body{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-
+                box-shadow: 0px 20px 40px var(--Azul_violeta_círculo);
                 /* Colores */
                 background-color:var(--Azul_violeta_círculo);
                 /* background-color:var(--Azul_persa_círculo); */
-
+                
                 .p2{
                     font-size: 4em;
                     font-weight: 700;
+                    color: var(--Azul_pálido);
+                }
+                .p3{
+                    color: var(--Azul_pálido);
+                    color: var(--Azul_pizarra_claro_fondo);
                 }
             }
             .texto-final{
@@ -91,12 +95,56 @@ body{
                 .p4{
                     text-align: center;
                     font-size: 1em;
+                    color: var(--Lavanda_claro);
                 }
 
             }
         }
         .two{
             background-color:var(--Blanco);
+            ol{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                .lii{
+                    padding: 0.8em;
+                    display: flex;
+                    justify-content: space-between;
+                    color: var(--Lavanda_claro);
+                    .img-p-tw{
+                        display: flex;
+                        gap: 0.5em;
+                        .textt{
+                            font-size: 0.9em;
+                            font-weight:700;
+                        }
+                    }
+                    .textt2{
+                        font-size: 0.9em;
+                        color: var(--Lavanda_claro);
+                        font-weight:700;
+                        .espan{
+                            color:var(--Azul_grisáceo_oscuro);
+                            font-size: 0.9em;
+                            font-weight:900;
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            padding: 0.6em;
+            background-color: var(--Azul_grisáceo_oscuro);
+            border-radius: 2em;
+            color:var(--Azul_pálido);
+            border: none;
+            transition: all 300ms ease;
+
+        }
+        button:hover{
+            background-color:  var(--Azul_pizarra_claro_fondo);
+            background-color: var(--Azul_real_claro_fondo);
+
         }
     }
 }
