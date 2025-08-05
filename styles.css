@@ -16,8 +16,6 @@
     --Azul_pálido: hsl(221, 100%, 96%);
     --Lavanda_claro: hsl(241, 100%, 89%);
     --Azul_grisáceo_oscuro: hsl(224, 30%, 27%);
-
-    
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -30,37 +28,25 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: flex-start;
-
-    /* Eliminar */
-    background-image: url(./design/desktop-design.jpg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: var(--Azul_pálido);
     .card-principal{
         width: 36.7em;
         height: 25.6em;
         border-radius: 1.5em;
         display: flex;
-        
-        /* Eliminar */
-        background-color: rgba(255, 0, 217, 0.468);
+        background-color:var(--Blanco);
         .mitad{
-            padding: 2em;
+            padding: 2em 2.1em;
             width: 50%;
             height: 100%;
-            
-            display: flex;
-            flex-direction: column;
-            justify-content:space-between;
-
-            
         }
         .one{
             text-align: center;
             background-color:var(--Azul_real_claro_fondo);
+            border-radius: 1.5em;
             color:var(--Azul_pálido);
             .p1{
+                margin-bottom: 1.6em;
                 color: var(--Lavanda_claro);
                 font-size: 1.2em;
                 font-weight: 700;
@@ -73,11 +59,9 @@ body{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                box-shadow: 0px 20px 40px var(--Azul_violeta_círculo);
+                box-shadow: 0px 1px 350px var(--Azul_pálido);
                 /* Colores */
                 background-color:var(--Azul_violeta_círculo);
-                /* background-color:var(--Azul_persa_círculo); */
-                
                 .p2{
                     font-size: 4em;
                     font-weight: 700;
@@ -90,27 +74,35 @@ body{
             }
             .texto-final{
                 .h3-1{
+                    margin-top: 0.9em;
                     font-size: 1.5em;
                 }
                 .p4{
+                    padding: 0.8em;
                     text-align: center;
-                    font-size: 1em;
+                    font-size: 0.9em;
+                    line-height: 1.3em;
                     color: var(--Lavanda_claro);
                 }
-
             }
         }
         .two{
             background-color:var(--Blanco);
+            border-radius: 1.5em;
+            h3{
+                font-size: 1.2em;
+                margin-bottom: 1.2em;
+            }
             ol{
                 display: flex;
                 flex-direction: column;
                 gap: 1em;
                 .lii{
-                    padding: 0.8em;
+                    padding: 0.66em;
                     display: flex;
                     justify-content: space-between;
                     color: var(--Lavanda_claro);
+                    border-radius: 1em;
                     .img-p-tw{
                         display: flex;
                         gap: 0.5em;
@@ -133,18 +125,82 @@ body{
             }
         }
         button{
-            padding: 0.6em;
-            background-color: var(--Azul_grisáceo_oscuro);
-            border-radius: 2em;
+            margin-top: 2.3em;
+            padding: 0.7em;
+            width: 100%;
+            border-radius: 2.6em;
             color:var(--Azul_pálido);
             border: none;
             transition: all 300ms ease;
-
+            background-color: var(--Azul_grisáceo_oscuro);
+            cursor: pointer;
         }
         button:hover{
             background-color:  var(--Azul_pizarra_claro_fondo);
             background-color: var(--Azul_real_claro_fondo);
-
         }
     }
 }
+@media (max-width:375px){
+    body{
+        display: block;
+
+        .card-principal{
+            width: 100vw;
+            height: 100vh;
+            flex-direction: column;
+            display: flex;
+            .mitad{
+                width: 100vw;
+                padding: 2em;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            .one{
+                height: 40%;
+                border-radius:0 0 3em 3em;
+                .p1{
+                    font-size: 1.6em;
+                }
+                .p2-p3{
+                    padding: 1em;
+                    .p2{
+                        font-size: 5em;
+                    }
+                    
+                }
+                .texto-final{
+                    .h3-1{
+                        font-size: 1.6em;
+                    }
+                    .p4{
+                        font-size: 1.1em;
+                        line-height: 1.5em;
+                    }
+                }
+            }
+            .two{
+                height: 60%;
+                h3{
+                    font-size: 1.5em;
+                }
+                ol{
+                    .lii{
+                        padding: 1.5em;
+                        .img-p-tw{
+                            .textt{
+                                font-size: 1.3em;
+                            }
+                        }
+                    }
+                }
+            }
+            button{
+                padding: 1.3em;
+                margin-bottom: 2em;
+                font-size: 1.2em;
+            }
+        }
+    }
